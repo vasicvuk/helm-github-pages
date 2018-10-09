@@ -66,9 +66,9 @@ if [ "$CIRCLE_BRANCH" != "master" ]; then
 fi
 
 echo ">> Publishing to $GITHUB_PAGES_BRANCH branch of $GITHUB_PAGES_REPO"
-git config user.email "$CIRCLE_USERNAME@users.noreply.github.com"
-git config user.name CircleCI
+git config user.email "drone@users.noreply.github.com"
+git config user.name Drone
 git add .
 git status
-git commit -m "Published by CircleCI $CIRCLE_BUILD_URL"
+git commit -m "Published by Drone"
 git push origin "$GITHUB_PAGES_BRANCH"
