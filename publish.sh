@@ -70,5 +70,5 @@ git config user.email "drone@users.noreply.github.com"
 git config user.name Drone
 git add .
 git status
-git commit -m "Published by Drone"
+git commit -m "Published by Drone [CI SKIP]"
 git push origin "$GITHUB_PAGES_BRANCH"
