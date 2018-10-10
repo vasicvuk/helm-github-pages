@@ -58,7 +58,8 @@ find "$HELM_CHARTS_SOURCE" -mindepth 1 -maxdepth 1 -type d | while read chart; d
   helm package -d "$chart_name" "$chart"
 done
 echo '>>> helm repo index'
-helm repo index .
+echo "Handling url"
+helm repo index . --url https://asseco-see.github.io/helm/
 
 if [ "$CIRCLE_BRANCH" != "master" ]; then
   echo "Current branch is not master and do not publish"
